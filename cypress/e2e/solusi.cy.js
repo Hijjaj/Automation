@@ -15,6 +15,6 @@ describe('template spec', () => {
     cy.get('#ozp7022vqhe').type('hallo');
     cy.get('.mb-0 > .btn').click();
     /* ==== End Cypress Studio ==== */
-    cy.get('#ozp7022vqhe').should('contain', 'isi nomor whatsapp hanya menggunakan angka saja');
+    cy.get('#ozp7022vqhe').should('contain', 'isi nomor telepon hanya menggunakan angka saja');
   });
 });
