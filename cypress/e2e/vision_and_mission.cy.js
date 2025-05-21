@@ -7,14 +7,14 @@ describe('template spec', () => {
       win.dataLayer = win.dataLayer || [];
     });
     cy.visit('https://javan.co.id/en/homepage');
-    let initialUrl;
-    cy.url().then((url) => {
-      initialUrl = url;
-    });
     /* ==== Generated with Cypress Studio ==== */
     cy.get('.g-col-lg-3 > .list-unstyled > :nth-child(1) > a').click();
-    cy.get('.text-lg-center > .o_default_snippet_text').click();
+    cy.get('.text-lg-center > .o_default_snippet_text')
+    .click()
+    .wait(1000) 
+    .then(() => {
+    throw new Error('Klik pada elemen tidak menghasilkan perubahan apapun.');
+  });
     /* ==== End Cypress Studio ==== */
-    cy.url().should('not.eq', initialUrl);
   });
 });
